@@ -157,7 +157,7 @@ export default function Home() {
           {/* Newsletter Signup */}
           <div className="mt-8 pt-8 border-t border-white/[.145]">
             <div className="max-w-md mx-auto text-center">
-              <h3 className="font-semibold text-lg mb-4">Don't Miss Out</h3>
+              <h3 className="font-semibold text-lg mb-4">Don&apos;t Miss Out</h3>
               <p className="text-sm mb-4">Get the latest news and racing information straight to your inbox!</p>
               <form className="flex gap-2">
                 <input

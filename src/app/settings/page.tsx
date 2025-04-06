@@ -2,10 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 
 export default function SettingsPage() {
-  const router = useRouter()
   const [settings, setSettings] = useState({
     emailNotifications: true,
     darkMode: false,
