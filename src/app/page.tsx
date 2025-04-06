@@ -26,21 +26,27 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-black text-white">
       {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden z-0 ">
-        {/* <iframe
-          src="https://player.vimeo.com/video/1058335952?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-          className="w-full h-full object-cover"
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          title="Background Video"
-        ></iframe> */}
-        <div className="elementor-element elementor-element-39b3102e e-con-full e-flex e-con e-parent e-lazyloaded" data-id="39b3102e" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/vimeo.com\/1058335952\/ea22bce39e?share=copy&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}"><div className="elementor-background-video-container" data-vimeo-initialized="true"><div className="elementor-background-video-embed"></div><iframe src="https://player.vimeo.com/video/1058335952?h=ea22bce39e&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;background=1&amp;app_id=122963" width="426" height="240" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Velocity Sim Lounge" data-ready="true" className="elementor-background-video-embed" style={{width: "1657.85px", height: "934px"}}></iframe></div><div className="elementor-element elementor-element-9edd7da e-flex e-con-boxed e-con e-child" data-id="9edd7da" data-element_type="container"><div className="e-con-inner"><div className="elementor-element elementor-element-1c7a36a elementor-widget elementor-widget-heading" data-id="1c7a36a" data-element_type="widget" data-widget_type="heading.default"></div></div></div></div>
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+        <div className="w-full h-full">
+          <iframe 
+            src="https://player.vimeo.com/video/1058335952?h=ea22bce39e&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;background=1&amp;app_id=122963" 
+            className="w-full h-full object-cover absolute top-0 left-0"
+            frameBorder="0" 
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+            title="Velocity Sim Lounge" 
+            data-ready="true"
+            style={{
+              width: "100vw",
+              height: "100vh",
+              objectFit: "cover"
+            }}
+          ></iframe>
+        </div>
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      <div className="relative z-10 grid grid-rows-[auto_1fr_auto] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
         <header className="w-full flex justify-end">
           {isLoggedIn ? (
             <DropdownMenu>
@@ -77,17 +83,18 @@ export default function Home() {
             </div>
           )}
         </header>
-        <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start text-white">
-          <h1 className="text-4xl sm:text-6xl font-bold text-center">Velocity Track Records</h1>
+        <main className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-6xl font-bold mb-8">Velocity Track Records</h1>
           
           {/* Track Records Table */}
-          <div className="w-full max-w-4xl mt-12">
+          <div className="w-full max-w-6xl">
             <TrackRecordsTable />
           </div>
         </main>
         
+        
       </div>
-      <footer className="row-start-3 w-full max-w-7xl mx-auto px-4 py-8 text-white">
+      <footer className="w-full max-w-7xl mx-auto px-4 py-8 text-white">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Contact Info */}
             <div className="space-y-4">

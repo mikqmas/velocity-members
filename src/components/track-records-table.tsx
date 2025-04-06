@@ -46,19 +46,19 @@ export function TrackRecordsTable() {
       <Table>
         <TableHeader>
           <TableRow className="border-white/[.145] hover:bg-white/5">
-            <TableHead className="text-white">Track</TableHead>
-            <TableHead className="text-white">Driver Name</TableHead>
-            <TableHead className="text-white">Record Time</TableHead>
-            <TableHead className="text-white">Date</TableHead>
+            <TableHead className="text-white text-lg py-4">Track</TableHead>
+            <TableHead className="text-white text-lg py-4">Driver Name</TableHead>
+            <TableHead className="text-white text-lg py-4">Record Time</TableHead>
+            <TableHead className="text-white text-lg py-4">Date</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {trackRecords.map((record, index) => (
             <TableRow key={index} className="border-white/[.145] hover:bg-white/5">
-              <TableCell className="text-white">{record.track}</TableCell>
-              <TableCell className="text-white">{record.name}</TableCell>
-              <TableCell className="text-white">{record.recordTime}</TableCell>
-              <TableCell className="text-white">{record.date}</TableCell>
+              <TableCell className="text-white text-base py-4">{record.track}</TableCell>
+              <TableCell className="text-white text-base py-4">{record.name}</TableCell>
+              <TableCell className="text-white text-base py-4">{record.recordTime}</TableCell>
+              <TableCell className="text-white text-base py-4">{record.date}</TableCell>
             </TableRow>
           ))}
         </TableBody>
