@@ -27,18 +27,19 @@ export default function Home() {
     <div className="relative min-h-screen bg-black text-white">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-        <div className="w-full h-full">
+        <div className="w-full h-full relative">
           <iframe 
             src="https://player.vimeo.com/video/1058335952?h=ea22bce39e&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;background=1&amp;app_id=122963" 
-            className="w-full h-full object-cover absolute top-0 left-0"
+            className="absolute top-0 left-1/2 transform -translate-x-1/2"
             frameBorder="0" 
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
             title="Velocity Sim Lounge" 
             data-ready="true"
             style={{
-              width: "100vw",
+              width: "auto",
               height: "100vh",
-              objectFit: "cover"
+              minWidth: "100vw",
+              aspectRatio: "16/9"
             }}
           ></iframe>
         </div>
