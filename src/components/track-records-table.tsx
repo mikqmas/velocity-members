@@ -1,0 +1,68 @@
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
+const trackRecords = [
+  {
+    track: "Spa-Francorchamps",
+    name: "John Smith",
+    recordTime: "2:15.123",
+    date: "2024-03-15",
+  },
+  {
+    track: "Silverstone",
+    name: "Sarah Johnson",
+    recordTime: "1:28.456",
+    date: "2024-03-10",
+  },
+  {
+    track: "Monza",
+    name: "Michael Brown",
+    recordTime: "1:21.789",
+    date: "2024-03-05",
+  },
+  {
+    track: "Nürburgring",
+    name: "Emma Wilson",
+    recordTime: "7:45.321",
+    date: "2024-03-01",
+  },
+  {
+    track: "Le Mans",
+    name: "David Lee",
+    recordTime: "3:15.987",
+    date: "2024-02-28",
+  },
+]
+
+export function TrackRecordsTable() {
+  return (
+    <div className="rounded-md border border-white/[.145] bg-black/[.3]">
+      <Table>
+        <TableHeader>
+          <TableRow className="border-white/[.145] hover:bg-white/5">
+            <TableHead className="text-white">Track</TableHead>
+            <TableHead className="text-white">Driver Name</TableHead>
+            <TableHead className="text-white">Record Time</TableHead>
+            <TableHead className="text-white">Date</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {trackRecords.map((record, index) => (
+            <TableRow key={index} className="border-white/[.145] hover:bg-white/5">
+              <TableCell className="text-white">{record.track}</TableCell>
+              <TableCell className="text-white">{record.name}</TableCell>
+              <TableCell className="text-white">{record.recordTime}</TableCell>
+              <TableCell className="text-white">{record.date}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </div>
+  )
+} 
