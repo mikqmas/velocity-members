@@ -42,7 +42,7 @@ const trackRecords = [
 
 export function TrackRecordsTable() {
   return (
-    <div className="rounded-md border border-white/[.145] bg-black/[.3]">
+    <div className="rounded-md border border-white/[.145] bg-black/[.6]">
       <Table>
         <TableHeader>
           <TableRow className="border-white/[.145] hover:bg-white/5">

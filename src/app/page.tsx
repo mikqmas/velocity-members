@@ -43,7 +43,7 @@ export default function Home() {
             }}
           ></iframe>
         </div>
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       {/* Content */}
